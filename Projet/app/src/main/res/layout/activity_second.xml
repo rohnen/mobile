@@ -62,7 +62,7 @@
             android:id="@+id/groupe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checkedButton="@id/radio1"
+
             android:orientation="horizontal">
 
             <RadioButton
