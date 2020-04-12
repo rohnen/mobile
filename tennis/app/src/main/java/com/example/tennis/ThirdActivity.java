@@ -9,8 +9,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ThirdActivity extends AppCompatActivity {
+    DatabaseHelper mydb;
     EditText score1;
     EditText score2;
+    EditText nom1;
+    EditText nom2;
     Button point1;
     Button faute1;
     Button fautepro1;
@@ -24,6 +27,9 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
+        mydb = new DatabaseHelper(this);
+        nom1 = (EditText) findViewById(R.id.editText2);
+        nom2 = (EditText) findViewById(R.id.editText6);
         score1 = (EditText) findViewById(R.id.score1);
         score2 = (EditText) findViewById(R.id.score2);
         point1 = (Button)findViewById(R.id.btn1_1);
@@ -32,9 +38,8 @@ public class ThirdActivity extends AppCompatActivity {
         point2 = (Button)findViewById(R.id.btn2_1);
         faute2 = (Button)findViewById(R.id.btn2_2);
         fautepro2 = (Button)findViewById(R.id.btn2_3);
-
-
-
+        mydb.nom_equipe(nom1, 1);
+        mydb.nom_equipe(nom2, 2);
 
         point1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,5 +109,7 @@ public class ThirdActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 }

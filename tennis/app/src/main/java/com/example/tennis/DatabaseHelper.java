@@ -2,8 +2,11 @@ package com.example.tennis;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
@@ -40,6 +43,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
         else
             return true;
+    }
+
+    public void nom_equipe (EditText editText, int col) {
+
+        Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM table_joueur", null);
+        cursor.moveToLast();
+        editText.append(cursor.getString(col) + " ");
     }
 
 }

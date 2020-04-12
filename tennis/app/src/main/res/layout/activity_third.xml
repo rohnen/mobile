@@ -16,8 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Joueur1" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/score1"
@@ -41,8 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Joueur2" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/score2"
